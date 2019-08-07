@@ -1,0 +1,13 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @variant.name
+p
+  strong
+    | Price:
+  = @variant.price
+= link_to 'Edit', edit_variant_path(@variant)
+|  | 
+= link_to 'Back', variants_path

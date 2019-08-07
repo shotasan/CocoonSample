@@ -1,0 +1,8 @@
+.nested-fields
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :price
+    = f.text_field :price
+  = link_to_remove_association "remove variant", f

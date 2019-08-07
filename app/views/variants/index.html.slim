@@ -1,0 +1,27 @@
+p#notice
+  = notice
+h1
+  | Variants
+table
+  thead
+    tr
+      th
+        | Name
+      th
+        | Price
+      th[colspan="3"]
+  tbody
+    - @variants.each do |variant|
+      tr
+        td
+          = variant.name
+        td
+          = variant.price
+        td
+          = link_to 'Show', variant
+        td
+          = link_to 'Edit', edit_variant_path(variant)
+        td
+          = link_to 'Destroy', variant, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Variant', new_variant_path
